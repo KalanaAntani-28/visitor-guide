@@ -5,5 +5,21 @@
       "destination": "https://visitor-guide.vercel.app/$1",
       "permanent": true
     }
-  ]
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Server", "value": "" },
+        { "key": "X-Powered-By", "value": "" },
+        { "key": "ETag", "value": "" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Access-Control-Allow-Origin", "value": "https://visitor-guide.vercel.app" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' https:; script-src 'self' 'unsafe-inline';" }
+      ]
+    }
+  ]
 }
